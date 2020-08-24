@@ -4,21 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-
-function counter(state = 0, action){
-  switch( action.type ){
-    case "add":
-      return state +1;
-    default:
-      return state;
-  }  
-}
-const store = createStore(counter)
-store.subscribe(function(){
-  console.log('有更新', store.getState())
-})
+import store from './store/index'
 
 ReactDOM.render(
     <Provider store={store}>
