@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
-import counter from "./reducers";
+import reducers from "./reducers";
 
-const store = createStore(counter)
+const store = createStore(reducers)
 
 store.subscribe(function(){
     console.log('有更新', store.getState())

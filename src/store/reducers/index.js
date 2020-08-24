@@ -1,11 +1,8 @@
+import counter from "./counter";
+import user from "./user";
+import { combineReducers } from 'redux'
 
-function counter(state = 0, action){
-    switch( action.type ){
-        case "add":
-            return state +1;
-        default:
-            return state;
-    }
-}
-
-export default counter
+export default combineReducers({
+    counter:counter,
+    user:user
+})

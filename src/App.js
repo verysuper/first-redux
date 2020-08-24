@@ -13,7 +13,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <h1>{this.props.count}</h1>
+                <h1>{this.props.user} : {this.props.counter}</h1>
                 <button onClick={this.handleClick}>Click me</button>
             </div>
         );
@@ -23,7 +23,8 @@ class App extends React.Component {
 const mapStateToProps = state => {
     console.log("mapStateToProps->state",state)
     return {
-        count: state,
+        user:state.user,
+        counter:state.counter
     }
 }
 
