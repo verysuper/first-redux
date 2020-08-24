@@ -19,7 +19,6 @@ const store = createStore(counter)
 store.subscribe(function(){
   console.log('有更新', store.getState())
 })
-store.dispatch({type:"add"})
 
 ReactDOM.render(
     <Provider store={store}>
