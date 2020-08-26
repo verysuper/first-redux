@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { connect } from 'react-redux'
 
@@ -30,6 +29,7 @@ class App extends React.Component {
     }
 }
 
+//將store的state指定給對應的props
 const mapStateToProps = state => {
     console.log("mapStateToProps->state",state)
     return {
@@ -38,4 +38,5 @@ const mapStateToProps = state => {
     }
 }
 
+//連結store的state和component
 export default connect(mapStateToProps)(App);
