@@ -10,10 +10,20 @@ class App extends React.Component {
             type:"add"
         })
     }
+
+    handleChange=(event)=>{
+        const { dispatch } = this.props
+        dispatch({
+            type:"set",
+            name:event.target.value
+        })
+    }
+
     render() {
         return (
             <div className="App">
                 <h1>{this.props.user} : {this.props.counter}</h1>
+                <input type="text" onChange={this.handleChange} value={this.props.user}/>
                 <button onClick={this.handleClick}>Click me</button>
             </div>
         );
